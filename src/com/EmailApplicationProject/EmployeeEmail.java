@@ -1,4 +1,4 @@
-package com.EmailApplication;
+package com.EmailApplicationProject;
 
 import java.util.Scanner;
 
@@ -14,7 +14,7 @@ public class EmployeeEmail {
     private String altEmail;
     private String companySuffix = "gmail.com";
     private int phoneNumber;
-
+    private final int defaultPasswordLength = 10;
 
     //Constructor to receive the firstname and lastname
     //Ask for the department - Method
@@ -32,6 +32,8 @@ public class EmployeeEmail {
 
     //Constructor to receive the firstname and lastname
     //Constructor is a public method.
+    //createPassword is a private method and accountDetails is a public method.
+
     public EmployeeEmail(String firstName, String lastName) {
 
         //New employee info received and firstname and last name initiated
@@ -47,8 +49,11 @@ public class EmployeeEmail {
         System.out.println("Email of the New Employee Created\n" + email);
 
         //Generate a random password
-        this.password = createPassword(10);
-        System.out.println("Password Created " + password);
+        this.password = createPassword(defaultPasswordLength);
+        System.out.println("Your Password is Created " + password);
+
+        //Show all the account details
+        //accountDetails(); I called this public method from outside of the class.
 
     }
 
@@ -78,16 +83,18 @@ public class EmployeeEmail {
         String AlphaNumericString = "ABCDEFGHIJHIKLabcdefghijkl123456789!@#$%^&*()";
         char[] password = new char[length]; //The password is set of individual characters, char[] is used instead of String, because we need to read individual characters of a string.
         for (int i = 0; i < length; i++) {
-            int random = (int) (Math.random() * AlphaNumericString.length());
+            int random = (int) (Math.random() * AlphaNumericString.length()); //Math.random() gives you a number between 0-1 in double.
             password[i] = AlphaNumericString.charAt(random);
         }
         return new String(password); //Since we need a String in the end , we keep return type as String and not the individual char array.
     }
 
     //Account details is public method, meaning it needs to be called by other classes outside this class.
-    public void accountDetails() {
-
+    public String accountDetails() {
+        System.out.println("Show employee information form a public method available to outside world. \nFIRST NAME: " + firstName + " \nLAST NAME:  " + lastName + " \nCOMPANY EMAIL: " + email + " \nMAILBOX CAPACITY:  Capacity " + mailboxCapacity);
+        return "";
     }
+
 
     public String getEmail() {
         return email;
