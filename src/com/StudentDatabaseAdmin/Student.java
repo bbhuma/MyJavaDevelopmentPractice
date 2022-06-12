@@ -1,5 +1,8 @@
 package com.StudentDatabaseAdmin;
 
+import com.sun.xml.internal.fastinfoset.tools.FI_DOM_Or_XML_DOM_SAX_SAXEvent;
+
+import javax.sql.rowset.FilteredRowSet;
 import java.util.Scanner;
 
 public class Student {
@@ -47,10 +50,10 @@ public class Student {
             Scanner sc = new Scanner(System.in);
             String addNewCourse = sc.nextLine();
             if (!addNewCourse.equals("Q")) {
-                this.courses = courses + addNewCourse + " --- ";
+                this.courses = courses + addNewCourse + " ";
                 tuitionBalance = tuitionBalance + costOfEachCourse;
             } else {break;}
-        } while (!(1 == 0));
+        } while (1 != 0);
         System.out.println("Enrolled courses by the student in the current sem :" + courses); //To see the tuition balance and courses at the end of loop.
     }
 
@@ -67,8 +70,13 @@ public class Student {
         tuitionBalance -= payment;
         viewBalance();
     }
-
+    public String showInfo() {
+       return  "NAME: "+ firstName+" "+lastName+
+                "\nCourses Enrolled: "+ courses+
+                "\nBalance: "+ tuitionBalance;
+    }
     //show all the details of the class by using a regular tostring method of the class or you can have a seperate method for it.
+
     @Override
     public String toString() {
         return "Student{" +

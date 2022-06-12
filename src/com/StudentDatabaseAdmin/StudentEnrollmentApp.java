@@ -3,6 +3,7 @@ package com.StudentDatabaseAdmin;
 public class StudentEnrollmentApp {
     public static void main(String[] args) {            //Driver code of the application.
         Student s1= new Student();
+        System.out.println(s1.showInfo());
         System.out.println(s1.toString());
     }
 //    Student s1= new Student();
