@@ -41,26 +41,27 @@ public class Student {
 
     //Enroll in courses
     public void enrollInCourses() {
-        System.out.println("Please choose the courses you wish to enroll in: " + "\n History 101" + "\n English 101" + "\n Math 101" + "\n Physics 101" + "\n Chemistry 101" + "\n Q for Quit");
-        Scanner sc = new Scanner(System.in);
+        //Get inside a loop to enter multiple courses until Q is pressed.
         do {
+            System.out.println("Please choose the courses you wish to enroll (press Q for Quit): ");
+            Scanner sc = new Scanner(System.in);
             String addNewCourse = sc.nextLine();
             if (!addNewCourse.equals("Q")) {
                 this.courses = courses + addNewCourse + " --- ";
                 tuitionBalance = tuitionBalance + costOfEachCourse;
-            } else break;
+            } else {break;}
         } while (!(1 == 0));
         System.out.println("Enrolled courses by the student in the current sem :" + courses); //To see the tuition balance and courses at the end of loop.
     }
 
     // view balance
     public void viewBalance() {
-        System.out.println("Balance tuition of the student for the enrolled courses: "+ tuitionBalance+"\n");
+        System.out.println("Balance tuition of the student for the enrolled courses: " + tuitionBalance + "\n");
     }
 
     //pay the balance
     public void payTheBalance() {
-        System.out.println("Do you wan to pay the balance?"+ "\nIf yes enter the amount you want to pay today"+"Enter 0 if you don't want to pay today");
+        System.out.println("Do you wan to pay the balance?" + "\nIf yes enter the amount you want to pay today" + "Enter 0 if you don't want to pay today");
         Scanner sc = new Scanner(System.in);
         int payment = sc.nextInt();
         tuitionBalance -= payment;
