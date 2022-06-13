@@ -19,18 +19,19 @@ public class Student {
     // Constructor to populate the name and year.
     // Driving Code of the student class.
     public Student() {
-        System.out.println("Enter the student Firstname: ");
+        System.out.print("Enter the student Firstname: ");
         Scanner sc1 = new Scanner(System.in);
         this.firstName = sc1.nextLine();
-        System.out.println("Enter the student Lastname: ");
+        System.out.print("Enter the student Lastname: ");
         Scanner sc2 = new Scanner(System.in);
         this.lastName = sc2.nextLine();
-        System.out.println("Enter the student Grad Year form 1-4 numbers for GradYear: ");
+        System.out.println(" 1 - Freshmen "+"\n 2 - Sophomore"+"\n 3 - Junior "+"\n 4 - Senior ");
+        System.out.print("Enter the Student GradYear: ");
         Scanner sc3 = new Scanner(System.in);
         this.gradYear = sc3.nextInt();
         generateStudentId();
         System.out.println("Name: " + firstName + " " + lastName + "\nGrade Level: " + gradYear + "\nStudentID: " + studentId);
-        enrollInCourses();
+        enrollInCourses();  //You can also call these form the main method,
         viewBalance();
         payTheBalance();
         toString();
@@ -46,7 +47,7 @@ public class Student {
     public void enrollInCourses() {
         //Get inside a loop to enter multiple courses until Q is pressed.
         do {
-            System.out.println("Please choose the courses you wish to enroll (press Q for Quit): ");
+            System.out.print("Please choose the courses you wish to enroll (press Q for Quit): ");
             Scanner sc = new Scanner(System.in);
             String addNewCourse = sc.nextLine();
             if (!addNewCourse.equals("Q")) {
@@ -64,7 +65,8 @@ public class Student {
 
     //pay the balance
     public void payTheBalance() {
-        System.out.println("Do you wan to pay the balance?" + "\nIf yes enter the amount you want to pay today" + "Enter 0 if you don't want to pay today");
+        System.out.print
+                ("Do you want to pay the balance?" + "\nIf you want to pay the balance, enter the $amount if not enter 0: ");
         Scanner sc = new Scanner(System.in);
         int payment = sc.nextInt();
         tuitionBalance -= payment;
