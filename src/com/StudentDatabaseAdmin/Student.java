@@ -47,7 +47,7 @@ public class Student {
     public void enrollInCourses() {
         //Get inside a loop to enter multiple courses until Q is pressed.
         do {
-            System.out.print("Please choose the courses you wish to enroll (press Q for Quit): ");
+            System.out.println("Please choose the courses you wish to enroll (press Q for Quit): ");
             Scanner sc = new Scanner(System.in);
             String addNewCourse = sc.nextLine();
             if (!addNewCourse.equals("Q")) {
@@ -67,6 +67,7 @@ public class Student {
     public void payTheBalance() {
         System.out.print
                 ("Do you want to pay the balance?" + "\nIf you want to pay the balance, enter the $amount if not enter 0: ");
+
         Scanner sc = new Scanner(System.in);
         int payment = sc.nextInt();
         tuitionBalance -= payment;
