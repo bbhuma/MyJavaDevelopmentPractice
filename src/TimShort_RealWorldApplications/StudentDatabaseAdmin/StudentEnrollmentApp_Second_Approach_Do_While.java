@@ -1,4 +1,4 @@
-package com.StudentDatabaseAdmin;
+package TimShort_RealWorldApplications.StudentDatabaseAdmin;
 
 import java.util.Scanner;
 

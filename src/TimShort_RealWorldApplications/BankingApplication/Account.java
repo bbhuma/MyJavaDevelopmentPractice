@@ -1,4 +1,4 @@
-package com.BankingApplication;
+package TimShort_RealWorldApplications.BankingApplication;
 
 public abstract class Account implements IBaseRate {
     private final String name;

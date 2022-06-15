@@ -1,4 +1,4 @@
-package com.EmailApplicationProject;
+package TimShort_RealWorldApplications.EmailApplicationProject;
 
 public class EmailApp {
     public static void main(String[] args) {

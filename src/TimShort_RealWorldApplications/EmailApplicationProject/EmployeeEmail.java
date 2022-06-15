@@ -1,4 +1,4 @@
-package com.EmailApplicationProject;
+package TimShort_RealWorldApplications.EmailApplicationProject;
 
 import java.util.Scanner;
 

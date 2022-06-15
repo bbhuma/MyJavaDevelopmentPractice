@@ -1,8 +1,5 @@
-package com.StudentDatabaseAdmin;
+package TimShort_RealWorldApplications.StudentDatabaseAdmin;
 
-import com.sun.xml.internal.fastinfoset.tools.FI_DOM_Or_XML_DOM_SAX_SAXEvent;
-
-import javax.sql.rowset.FilteredRowSet;
 import java.util.Scanner;
 
 public class Student {

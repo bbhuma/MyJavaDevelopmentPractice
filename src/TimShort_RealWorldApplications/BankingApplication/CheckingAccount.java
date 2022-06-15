@@ -1,4 +1,4 @@
-package com.BankingApplication;
+package TimShort_RealWorldApplications.BankingApplication;
 
 public class CheckingAccount extends Account {
     private double checkingIntRate;
