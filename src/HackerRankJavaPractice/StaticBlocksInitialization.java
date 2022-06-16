@@ -15,7 +15,7 @@ public class StaticBlocksInitialization {
         try{
             if(B <= 0 || H <= 0){
                 flag = false;
-                throw new Exception("Breadth and height must be positive");
+                throw new Exception("Breadth and height must be positive"); //No need of else case, just simple if condition.
             }
         }catch(Exception e){
             System.out.println(e);
