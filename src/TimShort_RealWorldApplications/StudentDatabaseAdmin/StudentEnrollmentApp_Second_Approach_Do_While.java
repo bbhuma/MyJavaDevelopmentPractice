@@ -3,9 +3,9 @@ package TimShort_RealWorldApplications.StudentDatabaseAdmin;
 import java.util.Scanner;
 
 public class StudentEnrollmentApp_Second_Approach_Do_While {
-    public static void main_second_approach(String[] args) {            //Driver code of the application.
+    public static void main(String[] args) {            //Driver code of the application.
         //loop to enter multiple student details.
-        do {
+        while (true) {
             System.out.print("Do you want to enter new Student info? (Press Y to enter and Q to Quit): ");
             Scanner sc = new Scanner(System.in);
             String newStudent = sc.nextLine();
@@ -16,7 +16,7 @@ public class StudentEnrollmentApp_Second_Approach_Do_While {
             } else if (newStudent.equals("Q")) {
                 break;
             }
-        } while (true);
+        }
         System.out.print("Have A Nice Day!!");
     }
 //    Student s1= new Student();
