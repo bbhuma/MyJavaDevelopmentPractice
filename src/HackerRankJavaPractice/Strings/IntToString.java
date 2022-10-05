@@ -1,4 +1,4 @@
-package HackerRankJavaPractice;
+package HackerRankJavaPractice.Strings;
 
 import java.util.*;
 import java.security.*;
